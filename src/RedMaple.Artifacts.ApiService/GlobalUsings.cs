@@ -1,0 +1,10 @@
+﻿global using RedMaple.Artifacts.ApiService.Infrastructure;
+global using Microsoft.EntityFrameworkCore;
+global using RedMaple.Artifacts.ApiService.Models;
+global using RedMaple.Artifacts.Contracts.Requests;
+global using RedMaple.Artifacts.Contracts;
+global using RedMaple.Artifacts.Contracts.Models;
+global using Microsoft.AspNetCore.Mvc;
+global using RedMaple.Artifacts.ApiService.Services;
+global using RedMaple.Artifacts.Contracts.Responses;
+global using RedMaple.Artifacts.ApiService.Mapping;

@@ -1,0 +1,57 @@
+﻿@page "/products/{slug}"
+@using RedMaple.Artifacts.Contracts.Responses
+@rendermode InteractiveServer
+@inject ArtifactsApiClient Api
+
+<MudPopoverProvider />
+
+<PageTitle>@Slug</PageTitle>
+
+<MudStack Class="mt-5" Row="true">
+    <MudText>@Slug</MudText>
+    <MudSpacer />
+    <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="async () => await IncrementMajorAsync()">Increment major</MudButton>
+    <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="async () => await IncrementMinorAsync()">Increment minor</MudButton>
+    <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="async () => await IncrementPatchAsync()">Increment patch</MudButton>
+</MudStack>
+
+<MudDataGrid Items="_versions" T="ArtifactVersion">
+    <Columns>
+        <PropertyColumn Title="Serialized" Property="x => x.SerializedVersion" />
+        <PropertyColumn Title="Version" Property="x => x.VersionString" />
+    </Columns>
+</MudDataGrid>
+
+@code {
+    private List<ArtifactVersion> _versions = new();
+
+    [Parameter]
+    public string Slug { get; set; } = "";
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadVersionsAsync();
+    }
+
+    private async Task IncrementMinorAsync()
+    {
+        await Api.IncrementMinorVersionAsync(Slug);
+        await LoadVersionsAsync();
+    }
+    private async Task IncrementMajorAsync()
+    {
+        await Api.IncrementMajorVersionAsync(Slug);
+        await LoadVersionsAsync();
+    }
+    private async Task IncrementPatchAsync()
+    {
+        await Api.IncrementPatchVersionAsync(Slug);
+        await LoadVersionsAsync();
+    }
+
+    private async Task LoadVersionsAsync()
+    {
+        var response = await Api.GetVersionsAsync(Slug);
+        _versions = response.Versions;
+    }
+}

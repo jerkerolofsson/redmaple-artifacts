@@ -1,0 +1,41 @@
+﻿@page "/products"
+@using RedMaple.Artifacts.Contracts.Responses
+@rendermode InteractiveServer
+@inject ArtifactsApiClient Api
+
+<MudPopoverProvider/>
+
+<PageTitle>Products</PageTitle>
+
+<h1>Products</h1>
+@if (_products != null)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Slug</th>
+                <th>Version Format</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in _products.Products)
+            {
+                <tr>
+                    <td>@product.Name</td>
+                    <td>@product.Slug</td>
+                    <td>@product.Format</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private GetProductsResponse? _products;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _products = await Api.GetProductsAsync();
+    }
+}

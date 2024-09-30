@@ -1,0 +1,24 @@
+﻿@page "/add-product"
+@rendermode InteractiveServer
+
+@inject ArtifactsApiClient Api
+<PageTitle>Add Product</PageTitle>
+
+<h1>Add Product</h1>
+
+<EditForm OnValidSubmit="async() => await OnValidSubmitAsync()" Model="_model">
+    <MudTextField @bind-Value="_model.Name" Label="Name"/>
+    <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary">Add</MudButton>
+</EditForm>
+
+@code {
+    private AddProductRequest _model = new AddProductRequest
+    {
+        Name = "New product"
+    };
+
+    public async Task OnValidSubmitAsync()
+    {
+        await Api.AddProductAsync(_model);
+    }
+}

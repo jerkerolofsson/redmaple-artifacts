@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsAspireHost>true</IsAspireHost>
+    <UserSecretsId>76eb8a9d-a16a-4556-97a3-1308b8d42bfe</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RedMaple.Artifacts.ApiService\RedMaple.Artifacts.ApiService.csproj" />
+    <ProjectReference Include="..\RedMaple.Artifacts.Web\RedMaple.Artifacts.Web.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspire.Hosting.AppHost" />
+	  <PackageReference Include="Aspire.Hosting.PostgreSQL"/>
+  </ItemGroup>
+
+</Project>

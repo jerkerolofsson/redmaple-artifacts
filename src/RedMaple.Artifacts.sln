@@ -1,0 +1,54 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedMaple.Artifacts.AppHost", "RedMaple.Artifacts.AppHost\RedMaple.Artifacts.AppHost.csproj", "{B224A330-6179-4E7A-8093-BA22D898D383}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedMaple.Artifacts.ServiceDefaults", "RedMaple.Artifacts.ServiceDefaults\RedMaple.Artifacts.ServiceDefaults.csproj", "{FA1CA0BC-65CA-44D8-95AE-459782A47A01}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedMaple.Artifacts.ApiService", "RedMaple.Artifacts.ApiService\RedMaple.Artifacts.ApiService.csproj", "{997E9DD4-7239-491D-A26F-6945868CA7E8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedMaple.Artifacts.Web", "RedMaple.Artifacts.Web\RedMaple.Artifacts.Web.csproj", "{554C27F7-7559-4A7D-A9D6-FE9B9537A26C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5A34C996-2836-472E-8226-139332445857}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Packages.props = Directory.Packages.props
+		nuget.config = nuget.config
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedMaple.Artifacts.Contracts", "RedMaple.Artifacts.Contracts\RedMaple.Artifacts.Contracts.csproj", "{A9851290-B097-4684-A3FD-18936925C773}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B224A330-6179-4E7A-8093-BA22D898D383}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B224A330-6179-4E7A-8093-BA22D898D383}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B224A330-6179-4E7A-8093-BA22D898D383}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B224A330-6179-4E7A-8093-BA22D898D383}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA1CA0BC-65CA-44D8-95AE-459782A47A01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA1CA0BC-65CA-44D8-95AE-459782A47A01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA1CA0BC-65CA-44D8-95AE-459782A47A01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA1CA0BC-65CA-44D8-95AE-459782A47A01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{997E9DD4-7239-491D-A26F-6945868CA7E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{997E9DD4-7239-491D-A26F-6945868CA7E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{997E9DD4-7239-491D-A26F-6945868CA7E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{997E9DD4-7239-491D-A26F-6945868CA7E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{554C27F7-7559-4A7D-A9D6-FE9B9537A26C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{554C27F7-7559-4A7D-A9D6-FE9B9537A26C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{554C27F7-7559-4A7D-A9D6-FE9B9537A26C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{554C27F7-7559-4A7D-A9D6-FE9B9537A26C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9851290-B097-4684-A3FD-18936925C773}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9851290-B097-4684-A3FD-18936925C773}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9851290-B097-4684-A3FD-18936925C773}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9851290-B097-4684-A3FD-18936925C773}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {59506C77-FB97-4347-9A57-B0EF747D03B1}
+	EndGlobalSection
+EndGlobal
