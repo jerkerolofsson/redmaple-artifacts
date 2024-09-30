@@ -132,7 +132,7 @@ namespace RedMaple.Artifacts.Contracts
                     return Increment(index - 1);
                 }
 
-                components[index] = (count + 1).ToString();
+                components[index] = count.ToString();
                 for(int i=index+1; i<3;i++)
                 {
                     components[i] = "0";
